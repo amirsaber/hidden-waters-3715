@@ -1,7 +1,7 @@
 extends layout
 
 block content
-    div(ng-controller="CountryCtrl", class="col-md-12")
+    div(ng-controller="CountryCtrl", class="col-md-4")
         div(class="row")
             div(class="col-md-4")
                 input(class="form-control", type="text", ng-change="update()", ng-model="countryName", placeholder="Enter country name here.")
