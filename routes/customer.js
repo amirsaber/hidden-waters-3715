@@ -7,12 +7,18 @@ var mysql = require('../database');
 
 /* GET home page. */
 router.get('/:country_name', function(req, res) {
-    var query = 'select ID, country, `name`, email FROM customer_list left join customer ON customer_list.ID = customer.customer_id WHERE country = ' + mysql.db.escape(req.params.country_name) + ' ORDER BY ID ASC';
-    mysql.db.query(query,function(err, rows, fields){
+    var query = 'SELECT ID, country, `name`, email FROM customer_list left join customer ON customer_list.ID = customer.customer_id WHERE country = ' + mysql.pool.escape(req.params.country_name) + ' ORDER BY ID ASC';
+    mysql.pool.getConnection(function(err,connection){
         if(err){
-            mysql.reconnect();
+            throw err;
         }
-        res.json(rows);
+        connection.query(query, function(err, rows, fields){
+            if(err){
+                throw err;
+            }
+            connection.release();
+            res.json(rows);
+        });
     });
 });
 
