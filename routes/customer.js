@@ -10,7 +10,7 @@ router.get('/:country_name', function(req, res) {
     var query = 'select ID, country, `name`, email FROM customer_list left join customer ON customer_list.ID = customer.customer_id WHERE country = ' + mysql.db.escape(req.params.country_name) + ' ORDER BY ID ASC';
     mysql.db.query(query,function(err, rows, fields){
         if(err){
-            mysql.connect();
+            mysql.reconnect();
         }
         res.json(rows);
     });
