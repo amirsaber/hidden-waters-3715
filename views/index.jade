@@ -1,7 +1,7 @@
 extends layout
 
 block content
-    div(ng-controller="CountryCtrl", class="col-md-4")
+    div(ng-controller="CountryCtrl", class="col-md-12")
         div(class="row")
             div(class="col-md-4")
                 input(class="form-control", type="text", ng-change="update()", ng-model="countryName", placeholder="Enter country name here.")
@@ -10,6 +10,6 @@ block content
                 div(class="list-group")
                     a(href="", class="list-group-item", ng-repeat="country in countries", ng-click="getCustomers(country.country_name)",) {{country.country_name}} ({{country.total_customers}})
         div(class="row")
-            div(class="col-md-4")
+            div(class="col-md-8")
                 div(class="list-group")
                     a(href="", class="list-group-item", ng-repeat="customer in customers") {{customer.string}}
