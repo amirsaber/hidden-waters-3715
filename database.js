@@ -14,11 +14,14 @@ else {
 var connection  = mysql.createConnection(connectionString);
 
 
-connection.connect(function (err) {
-    if (err) {
-        throw err;
-    }
-    console.log('Database server connected');
-});
+var connect = function(){
+    connection.connect(function (err) {
+        if (err) {
+            throw err;
+        }
+        console.log('Database server connected');
+    });
+}
 
-exports.db=connection;
+exports.db = connection;
+exports.connect = connect;
