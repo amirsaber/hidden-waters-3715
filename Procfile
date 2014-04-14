@@ -1,1 +1,1 @@
-web: node ./bin/www heroku
+web: node ./bin/www herok
