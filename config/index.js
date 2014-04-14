@@ -5,17 +5,17 @@
  Description: Configuration
  */
 var config = {
-    local: {
+    local: {//My local computer
         mode: 'local',
         port: 8080,
         mysql: {
             host: '127.0.0.1',
             user: 'root',
-            password: 'Amir271887',
+            password: 'password',
             database: 'sakila'
         }
     },
-    hcapital: {
+    hcapital: {//HCapital Server
         mode: 'hcapital',
         port: 8888,
         mysql: {
@@ -26,7 +26,7 @@ var config = {
             database: 'sakila'
         }
     },
-    heroku: {
+    heroku: {//Heroku Server
         mode: 'heroku',
         port: process.env.PORT,
         mysql: {

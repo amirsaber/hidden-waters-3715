@@ -1,10 +1,14 @@
-/**
- * Created by amirsaber on 4/12/14.
+/*
+ Author:AmirSaber Sharifi
+ Language: JavaScript
+ Framework: Nodejs
+ Description: Country Controller made by AngularJs to handle country search and country select events
  */
 function CountryCtrl($scope, $http){
-    $scope.countries = [];
-    $scope.customers = [];
+    $scope.countries = [];//List of countries that start with contains of text input
+    $scope.customers = [];//List of customers for that selected country
 
+    //Typing in input text will invoke this function which will call REST API that I made to handle request and get result
     $scope.update = function(){
         $scope.countries=[];
         $scope.customers=[];
@@ -19,6 +23,7 @@ function CountryCtrl($scope, $http){
         });
     };
 
+    //Selecting one of countries will send name of the country here and then it will be send to REST API to get JSON object of customers for that country
     $scope.getCustomers = function(country){
         $scope.countryName = country;
         $scope.countries = [];

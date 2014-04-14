@@ -2,9 +2,12 @@ doctype html
 html(ng-app)
     head
         title= title
+        //Use bootstracp css
         link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+        //AngularJs
         script(src='/javascripts/angular.min.js')
-        script(src='/javascripts/hcapital.js')
         script(src='/javascripts/angular-resource.min.js')
+        //controller for AngularJs
+        script(src='/javascripts/hcapital.js')
     body
         block content

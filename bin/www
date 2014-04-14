@@ -1,10 +1,17 @@
-#!/usr/bin/env node
-var debug = require('debug')('my-application');
+/*
+ Author:AmirSaber Sharifi
+ Language: JavaScript
+ Framework: Nodejs
+ Description: Entry point of application
+ */
+var debug = require('debug')('Hcapital');
 var app = require('../app');
 var config = require('../config')();
 
+//Setting port of server based on configuration
 app.set('port', config.port || 3000);
 
+//Starting Server
 var server = app.listen(app.get('port'), function() {
   console.log('Express server listening on port ' + server.address().port);
 });

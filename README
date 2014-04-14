@@ -1,0 +1,54 @@
+Application: Programmer Assessment of H Capital
+Author: AmirSaber Sharifi
+Date: 04/14/2014
+Tools: NodeJs, ExpressJs, Jade, AngularJs, MySql, bootStrap
+
+Instruction:
+----Install NodeJs
+----Run "$npm install" to install all dependencies in package.json
+----Run Application by node ./bin/www [Config]
+--------[Config]: To access local database use local e.g. node ./bin/www local
+--------[Config]: To access H Capital database use hcapital e.g. node ./bin/www hcapital
+--------[Config]: To access and run on Heroku use heroku e.g. node ./bin/www heroku
+--------To add other options to config file or edit credentials lookt at config/index.js
+
+Live Demo: http://hidden-waters-3715.herokuapp.com/
+
+Construction:
+HCapital
+    bin
+        www.js              //Entry poin
+    config
+        index.js            //General Configuration
+    node_modules            //required modules
+    public                  //public folder
+        javascripts
+            angular.min.js
+            angular-resource.min.js
+            hcapital.js     //my AngularJs Controller
+        stylesheets
+            bootstrap.min.css
+    routes
+        country.js          //handles /country requests(REST)
+        customer.js         //handles /customer requests(REST)
+        index.js            //handles / request and render view/index.jade for that
+    views
+        error.jade
+        index.jade          //the content of body of html
+        layout.jade         //base of html of application
+    app.js                  //Coniguration of ExpressJs like route configuration
+    database.js             //Database instance to send SQL queries to database
+    package.json
+    Procfile                //Heroku required file
+    README
+
+Report:
+I made this application by considering NodeJs and AngularJs in my mind and I tried to show my understanding of models.
+I didn't implement every aspects and layers of a real application to maintain simplicity of requested application on
+the other hand I tried to separate components so a balance between simplicity and component base application has been
+maintained.
+My application is made of a REST API which handles requests
+    1- /country/country_name like "/country/unit" will return json object of countries with "unit" at start of country name
+    2- /customer/country_name like "/customer/canada" will return json object of customers who are in Canada
+So AngularJs will make these request and populate web base data based on result of these type of request.
+I also implement the application on Heroku cloud platform so it's possible to have a live demo on the link provided above
