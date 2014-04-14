@@ -2,6 +2,7 @@
  * Created by amirsaber on 4/12/14.
  */
 var mysql = require('mysql');
+var config = require('./config')();
 
 /*var connectionString = [];
 if (process.env.CLEARDB_DATABASE_URL) {
@@ -12,10 +13,10 @@ else {
 }*/
 
 var pool = mysql.createPool({
-    host: "us-cdbr-east-05.cleardb.net",
-    user: "b6dfafc00e1a20",
-    password: "620c2501",
-    database: "heroku_a9593bf841220c8"
+    host: config.mysql.host,
+    user: config.mysql.user,
+    password: config.mysql.password,
+    database: config.mysql.database
 });
 
 
