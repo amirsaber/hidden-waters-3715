@@ -14,7 +14,7 @@ Instruction:
 Live Demo: http://hidden-waters-3715.herokuapp.com/
 
 Construction:
-HCapital
+Sakila
     bin
         www.js              //Entry poin
     config
@@ -24,7 +24,7 @@ HCapital
         javascripts
             angular.min.js
             angular-resource.min.js
-            hcapital.js     //my AngularJs Controller
+            main.js     //my AngularJs Controller
         stylesheets
             bootstrap.min.css
     routes

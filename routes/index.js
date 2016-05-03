@@ -9,7 +9,7 @@ var router = express.Router();
 
 //Redirect get request to index.jade in views with variable title
 router.get('/', function(req, res) {
-  res.render('index', { title: 'HCapital' });
+  res.render('index', { title: 'Sakila Test' });
 });
 
 module.exports = router;
