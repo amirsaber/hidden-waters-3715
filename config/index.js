@@ -22,5 +22,6 @@ var config = {
     }
 }
 module.exports = function(mode) {
+    console.log(process.argv[2]);
     return config[mode || process.argv[2] || 'local'] || config.local;
 }
