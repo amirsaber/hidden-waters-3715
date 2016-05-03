@@ -1,1 +1,1 @@
-web: node ./bin/www heroku
+web: npm run heroku

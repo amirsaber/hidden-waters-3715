@@ -4,7 +4,7 @@
  Framework: Nodejs
  Description: Entry point of application
  */
-var debug = require('debug')('Hcapital');
+var debug = require('debug')('Sakila');
 var app = require('../app');
 var config = require('../config')();
 
