@@ -1,11 +1,10 @@
 {
-  "name": "HCapital",
+  "name": "Test",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
     "local": "node ./bin/www local",
-    "hcapital": "node ./bin/www hcapital",
     "heroku": "node ./bin/www heroku"
   },
   "dependencies": {
@@ -18,7 +17,7 @@
     "jade": "~1.3.0",
     "mysql": "2.1.1"
   },
-  "description": "HCapital Programmer Assessment",
+  "description": "Programmer Assessment",
   "main": "var/www.js",
   "devDependencies": {},
   "repository": {

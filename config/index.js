@@ -15,26 +15,10 @@ var config = {
             database: 'sakila'
         }
     },
-    hcapital: {//HCapital Server
-        mode: 'hcapital',
-        port: 8888,
-        mysql: {
-            host: 'hcapital.ckn7qnbu0auv.us-east-1.rds.amazonaws.com',
-            user: 'sakila_user',
-            password: 'HCapital1',
-            port: 3306,
-            database: 'sakila'
-        }
-    },
     heroku: {//Heroku Server
         mode: 'heroku',
         port: process.env.PORT,
-        mysql: {
-            host: "us-cdbr-east-05.cleardb.net",
-            user: "b6dfafc00e1a20",
-            password: "620c2501",
-            database: "heroku_a9593bf841220c8"
-        }
+        mysql: process.env.CLEARDB_DATABASE_URL
     }
 }
 module.exports = function(mode) {
