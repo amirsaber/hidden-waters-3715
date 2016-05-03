@@ -1,4 +1,4 @@
-Application: Programmer Assessment of H Capital
+Application: Programmer Assessment
 Author: AmirSaber Sharifi
 Date: 04/14/2014
 Tools: NodeJs, ExpressJs, Jade, AngularJs, MySql, bootStrap
@@ -8,7 +8,6 @@ Instruction:
 ----Run "$npm install" to install all dependencies in package.json
 ----Run Application by node ./bin/www [Config]
 --------[Config]: To access local database use local e.g. node ./bin/www local
---------[Config]: To access H Capital database use hcapital e.g. node ./bin/www hcapital
 --------[Config]: To access and run on Heroku use heroku e.g. node ./bin/www heroku
 --------To add other options to config file or edit credentials lookt at config/index.js
 
